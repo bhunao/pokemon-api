@@ -1,6 +1,6 @@
 # pokemon-api
 
-## endpoints
+## endpoints  
 
 ## pokedex - class
 
