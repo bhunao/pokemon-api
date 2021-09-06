@@ -23,7 +23,7 @@ __example:__
 ## __pokedex__`(csv)`
 stores all the pokemons objects.
 
-### __search_by__`(**attributes)
+### __search_by__`(**attributes)`
 returns all pokemons that match the attributes passed as parameters.
 
 ```python
