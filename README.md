@@ -2,30 +2,19 @@
 
 ## endpoints  
 
-## pokedex - class
+### __`/pokemon`__
+search pokemons by attributes using qury parameters. the pokemon attributes are id,name,type,total,hp,attack,defense,sp_attack,sp_defense.
 
-### methods
+__example:__  
+`http://localhost:8000/pokemon/?name=bulbasaur`
 
-#### search_by(**attributes)
+## __pokedex__`(csv)`
+stores all the pokemons objects.
 
-#### iterate()
+### __search_by__`(**attributes)
+returns all pokemons that match the attributes passed as parameters.
 
-## pokemon - class
-class that stores the data of pokemons and has methods to compare and evaluate them.  
-
-
-### attrs
-> frozen attrs
 ```python
-_is_mega: bool
-_can_evolve: bool
-evolution: object = None
-````
-
-### methods
-
-#### __gt__
-for evolutions
-
-## tests
-
+pokedex.search_by(name="bulbasaur")
+>> <id=1 name="bulbasaur" type=["grass", "poison"]>
+```
