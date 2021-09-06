@@ -3,6 +3,17 @@ from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
+class poke_type:
+    value: str
+
+    def __eq__(self, other):
+        if other.value.lower() == "any":
+            return True
+        else:
+            return self.value == other.value
+
+
+@dataclass(frozen=True)
 class Pokemon:
     """class that stores the pokemon data and has methods to compare and evaluate then"""
     id: int
