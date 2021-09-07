@@ -27,7 +27,6 @@ class Pokedex:
         result = []
         poke_attrs = {k: v for k, v in attributes.items() if v}
 
-
         for pokemon in self.pokedex:
             if pokemon.__dict__.items() >= poke_attrs.items():
                 print(poke_attrs, pokemon)
