@@ -17,7 +17,6 @@ def test_pokemon_object():
     assert pokemon is not None
 
 def test_pokedex_search_by():
-    the data"""
     id = 1
     pokedex = Pokedex("data.csv")
     pokemon = pokedex.search_by(id=id)[0]
