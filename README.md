@@ -3,15 +3,27 @@
 ## endpoints  
 
 ### __`/pokemon`__
-search pokemons by attributes using qury parameters. the pokemon attributes are id,name,type,total,hp,attack,defense,sp_attack,sp_defense.
+search pokemons by attributes using qury parameters.  
+pokemons attributes are:
+- id
+- name
+- type
+- total
+- hp
+- attack
+- defense
+- sp_attack
+- sp_defense
 
 __example:__  
 `http://localhost:8000/pokemon/?name=bulbasaur`
-
+ 
+--- 
+ 
 ## __pokedex__`(csv)`
 stores all the pokemons objects.
 
-### __search_by__`(**attributes)
+### __search_by__`(**attributes)`
 returns all pokemons that match the attributes passed as parameters.
 
 ```python
