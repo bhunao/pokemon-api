@@ -7,6 +7,7 @@ class Pokemon(Base):
     __tablename__ = "pokemons"
 
     id = Column(Integer, primary_key=True, index=True)
+    national_id = Column(Integer)
     name = Column(String)
     type = Column(String)
     hp = Column(Integer)

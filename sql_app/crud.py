@@ -13,7 +13,10 @@ def get_pokemons(db: Session, skip: int = 0, limit: int = 150):
     return db.query(models.Pokemon).offset(skip).limit(limit).all()
 
 def create_pokemon(db: Session, pokemon: schemas.PokemonCreate):
-    db_pokemon = models.Pokemon(**pokemon.dict())
+    if isinstance(pokemon, dict):
+        db_pokemon = models.Pokemon(**pokemon)
+    else:
+        db_pokemon = models.Pokemon(**pokemon.dict())
     db.add(db_pokemon)
     db.commit()
     db.refresh(db_pokemon)

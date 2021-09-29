@@ -4,6 +4,7 @@ from pydantic import BaseModel
 
 
 class PokemonBase(BaseModel):
+    national_id: int
     name: str
     type: str
     hp: int
