@@ -1,1 +1,1 @@
-uvicorn endpoints:api --reload
+uvicorn sql_app.main:app --reload
