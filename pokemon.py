@@ -1,16 +1,5 @@
 import pandas as pd
-from dataclasses import dataclass
-
-
-@dataclass(frozen=True)
-class poke_type:
-    value: str
-
-    def __eq__(self, other):
-        if other.value.lower() == "any":
-            return True
-        else:
-            return self.value == other.value
+from dataclasses import dataclass, field
 
 
 @dataclass(frozen=True)
@@ -19,25 +8,14 @@ class Pokemon:
     id: int
     name: str
     type: tuple
-    hp: int
-    attack: int
-    defense: int
-    sp_attack: int
-    sp_defense: int
-    speed: int
-    total: int
-    sprite: str = None
-    _is_mega: bool = None
-    _evolution: object = None
-    _devolution: object = None
-
-    def __repr__(self):
-        id = self.id
-        name = self.name
-        type = self.type
-
-        return f"<{id=} {name=} {type=}>"
-
-    def to_dict(self):
-        return dict()
-
+    hp: int = field(repr=False)
+    attack: int = field(repr=False)
+    defense: int = field(repr=False)
+    sp_attack: int = field(repr=False)
+    sp_defense: int = field(repr=False)
+    speed: int = field(repr=False)
+    total: int = field(repr=False)
+    sprite: str = field(repr=False, default=None)
+    _is_mega: bool = field(repr=False, default=None)
+    _evolution: object = field(repr=False, default=None)
+    _devolution: object = field(repr=False, default=None)
